@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4a4-MR-Hgs">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Base Nav-->
+        <scene sceneID="YnB-JM-HJT">
+            <objects>
+                <navigationController storyboardIdentifier="BaseNav" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4a4-MR-Hgs" customClass="BaseNav" customModule="QWNavDemoSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3AG-jU-KcE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ryd-3u-NxB" kind="relationship" relationship="rootViewController" id="Ds6-mp-834"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3w-Hc-PMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="319" y="100"/>
+        </scene>
+        <!--FristVC-->
+        <scene sceneID="bP0-7N-TKz">
+            <objects>
+                <viewController storyboardIdentifier="QWFristVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ryd-3u-NxB" customClass="QWFristVC" customModule="QWNavDemoSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cxr-Dy-EGa"/>
+                        <viewControllerLayoutGuide type="bottom" id="sb5-0H-X6L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lm6-Nc-uT9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LtG-I7-Py5">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="c24-vs-A9N"/>
+                                    <constraint firstAttribute="width" constant="46" id="r9o-Sk-cRE"/>
+                                </constraints>
+                                <state key="normal" title="PUSH"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fristVC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRi-e8-nuW">
+                                <rect key="frame" x="20" y="185" width="280" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="g9T-zJ-UbT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wRi-e8-nuW" secondAttribute="trailing" constant="20" id="ECM-pL-Boc"/>
+                            <constraint firstItem="LtG-I7-Py5" firstAttribute="centerY" secondItem="lm6-Nc-uT9" secondAttribute="centerY" id="cr0-hm-D1a"/>
+                            <constraint firstItem="wRi-e8-nuW" firstAttribute="leading" secondItem="lm6-Nc-uT9" secondAttribute="leading" constant="20" id="jQi-2g-LMS"/>
+                            <constraint firstItem="LtG-I7-Py5" firstAttribute="top" secondItem="wRi-e8-nuW" secondAttribute="bottom" constant="6" id="ru0-zI-ScU"/>
+                            <constraint firstItem="LtG-I7-Py5" firstAttribute="centerX" secondItem="lm6-Nc-uT9" secondAttribute="centerX" id="zVu-8V-30S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3MA-ET-y2q"/>
+                    <connections>
+                        <outlet property="button" destination="LtG-I7-Py5" id="IdS-3e-AB8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZhB-cC-Y2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="100"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="b3z-xb-939">
+            <objects>
+                <viewController storyboardIdentifier="QWSecondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Eie-6F-5rW" customClass="QWSecondVC" customModule="QWNavDemoSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Eyz-f0-2PK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Woc-XH-Z1c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RsW-29-8l7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="secondVC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzT-wO-SnG">
+                                <rect key="frame" x="20" y="245" width="280" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="7d4-YR-eLd"/>
+                                    <constraint firstAttribute="width" constant="280" id="Xdn-DP-dpf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EzT-wO-SnG" firstAttribute="centerY" secondItem="RsW-29-8l7" secondAttribute="centerY" id="Udf-27-sWj"/>
+                            <constraint firstItem="EzT-wO-SnG" firstAttribute="centerX" secondItem="RsW-29-8l7" secondAttribute="centerX" id="zYG-ZJ-T0T"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEP-KL-IM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1043" y="100"/>
+        </scene>
+    </scenes>
+</document>
