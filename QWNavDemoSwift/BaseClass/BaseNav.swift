@@ -14,8 +14,11 @@ class BaseNav: UINavigationController,UIGestureRecognizerDelegate,UINavigationCo
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //手势Delegate
         self.interactivePopGestureRecognizer!.delegate = self
         
+        //UINavigationControllerDelegate
         self.delegate = self
     }
 
@@ -28,6 +31,7 @@ class BaseNav: UINavigationController,UIGestureRecognizerDelegate,UINavigationCo
     
     override func pushViewController(viewController: UIViewController, animated: Bool) {
         
+        //push时关闭手势
         self.interactivePopGestureRecognizer?.enabled = false
         
         super.pushViewController(viewController, animated: animated)
@@ -38,9 +42,11 @@ class BaseNav: UINavigationController,UIGestureRecognizerDelegate,UINavigationCo
     func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
         
         if navigationController.viewControllers.count == 1 {
+            //如果是 rootViewController 关闭手势响应
             self.interactivePopGestureRecognizer?.enabled = false
         }
         else{
+            //如果不是 rootViewController 开启手势响应
             self.interactivePopGestureRecognizer?.enabled = true
         }
     }
